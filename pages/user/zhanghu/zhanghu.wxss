@@ -1,0 +1,10 @@
+/* pages/user/zhanghu/zhanghu.wxss */
+.zhanghu .back { background: #fff; padding:20px 2%; }
+.zhanghu .block { font-size: 14px; display: flex; justify-content: space-between; padding-bottom: 15px; border-bottom:0.01em solid #efefef }
+.zhanghu .block .mobile { position: relative; }
+.zhanghu .block .mobile span { color:#bc2c2c; position: absolute; right:-30px; top:-6px; font-size: 12px; font-weight: bold; }
+.zhanghu .block .jine span { font-size: 18px; font-weight: bold; color:#43acfd }
+.zhanghu .chongzhi { margin-top: 20px; display: flex; }
+.zhanghu .chongzhi .button { border-radius: 5px; text-align: center; background-color:#fff; font-size: 12px; height:30px; line-height: 30px; width:70px; margin-right: 10px; color:#fff; }
+.zhanghu .chongzhi .button.cz { background: #bc2c2c; }
+.zhanghu .chongzhi .button.tx { background: #43acfd; }

@@ -1,0 +1,13 @@
+<!--pages/article/details/details.wxml-->
+<view class="title">
+    {{data.title}}
+</view>
+<view class="hist">
+<view class="dd1">发布时间: {{data.createtime}} 浏览次数：{{data.hits}} 编辑：{{data.zuozhe !== null?data.zuozhe:"佚名"}}</view>
+</view>
+<view class="syk-content">
+<import src="../../../static/wxParse/wxParse.wxml"/>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+</view>

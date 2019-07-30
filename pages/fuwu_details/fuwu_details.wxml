@@ -1,0 +1,38 @@
+<!--pages/peixun_details/peixun_details.wxml-->
+<view class="top">
+    <view class="img">
+        <image src="{{data.pic}}" mode="widthFix"></image>
+    </view>
+    <view class="con">
+        <view class="title">{{data.title}}</view>
+        <view class="jiage">￥{{data.jiage}}</view>
+    </view>
+</view>
+<view class="syk-content">
+<view class="stk-content-pos">服务详情</view>
+<import src="../../static/wxParse/wxParse.wxml"/>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+</view>
+<view class="syk-deta-footer">
+<view class="tdleft">
+    <view class="icon {{scstatus==1?'cur':''}}" bindtap="shoucang" data-scstatus="{{scstatus}}">
+        <view class="i">
+            <i class="iconfont icon-star"></i>
+        </view>
+        <view class="name">收藏</view>
+    </view>
+    <view class="icon" bindtap="calling">
+        <view class="i">
+            <i class="iconfont icon-phone"></i>
+        </view>
+        <view class="name">咨询</view>
+    </view>
+</view>
+<view class="tdright">
+    <view bindtap="GoMai" class="button">
+        立即购买
+    </view>
+</view>
+</view>

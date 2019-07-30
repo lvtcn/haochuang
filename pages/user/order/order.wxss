@@ -1,0 +1,17 @@
+.syk-cata { top:0px; }
+
+.syk-scrolist { margin-top: 41px; background: #f6f6f6; }
+.list .li { margin-bottom: 10px; }
+.list .li .status { font-size: 16px; color:#f24e33; padding:10px 20px; background: #fff; border-bottom: 0.01em solid #efefef; text-align: right;}
+.list .li .top { display: flex; justify-content: space-between; height:80px; padding:10px 20px; }
+.list .li .tdleft { margin-right: 10px; }
+.list .li .tdleft image { width:120px; height:80px; }
+.list .li .tdright { flex: 1; }
+.list .li .tdright .name { font-size: 16px; margin-top: 20px; font-weight: bold; color:#000; }
+.list .li .orji { background: #fff; display: flex; justify-content: space-between;  height:35px; line-height:35px; padding:0px 20px; }
+.list .li .orji .order { font-size: 12px; color:#666; }
+.list .li .orji .jiage  { font-size: 14px; color:#2f2e2e;}
+.list .li .orji .jiage span { font-size: 1em; font-weight: bold; color:#000; }
+.list .li .buttom { display: flex; justify-content: flex-end; padding:10px 20px; background: #fff; border-top: 0.01em solid #efefef; }
+.list .li .buttom .button { font-size: 12px; color:#ef4a51; width:80px; height:25px; text-align: center; line-height: 25px; border:0.01em solid #ef4a51; border-radius: 20px; }
+.list .li .buttom .qx { font-size: 12px; color:#404040; width:60px; height:25px; text-align: center; line-height: 25px; border:0.01em solid #dedede; border-radius: 20px; }

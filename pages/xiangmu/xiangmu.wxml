@@ -1,0 +1,66 @@
+<view class="syk-top">
+    <view class="syk-namesear">
+        <view class="name">找项目</view>
+        <view class="sear">
+            <view>
+                <i class="iconfont icon-search"></i>
+            </view>
+            <view>
+                <input bindinput="watchPassWord" name="k" maxlength='50' class="inp" placeholder='搜索课程'/>
+            </view>
+        </view>
+    </view>
+    <!-- 头部菜单 -->
+    <!--pages/templates/header/header.wxml-->
+    <import src="../templates/header/header" />
+    <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<view class="syk-cata">
+<view class="text {{num==0?'cur':''}}">
+    <picker value="{{cid}}" range="{{cidRange}}" bindchange="PickerBindchange" id="cid" data-num="0">
+        {{cidRange[cid]}}
+    </picker>
+</view>
+<view class="text {{num==1?'cur':''}}">
+    <picker value="{{guimo}}" range="{{guimoRange}}" bindchange="PickerBindchange" id="guimo" data-num="1">
+        {{guimoRange[guimo]}}
+    </picker>
+</view>
+<view class="text {{num==2?'cur':''}}">
+    <picker value="{{zijin}}" range="{{zijinRange}}" bindchange="PickerBindchange" id="zijin" data-num="2">
+        {{zijinRange[zijin]}}
+    </picker>
+</view>
+</view>
+<view class="container">
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有相关信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                <navigator url="/pages/xiangmu_details/xiangmu_details?id={{item.id}}">
+                    <view class="tdleft">
+                        <image src="{{item.pic}}" mode="aspectFill"></image>
+                    </view>
+                </navigator>
+                <view class="tdright">
+                    <view class="name">{{item.title}}<i class="iconfont icon-chakan"></i>{{item.hits}}</view>
+                    <navigator url="/pages/xiangmu_details/xiangmu_details?id={{item.id}}">
+                        <view class="bottom">
+                            <view class="leibie">{{item.cid}} {{item.guimo}} {{item.zijin}}</view>
+                            <view class="button">查看详情</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

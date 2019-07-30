@@ -1,0 +1,55 @@
+<template name="header-menu">
+  <view class="syk-menu" bindtap="toggleClass">
+    <image src="../../images/menu.svg"></image>
+  </view>
+  <view class="syk-menulisthide {{toggleClass.MenuShow}}">
+    <view class="li">
+      <navigator url="../pingce/pingce">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找测评</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../zhengce/zhengce?classid=5">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找政策</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../peixun/peixun?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找培训</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../changdi/changdi?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找场地</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../zijin/zijin?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找资金</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../xiangmu/xiangmu?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找项目</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../huodong/huodong?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找活动</em>
+      </navigator>
+    </view>
+    <view class="li">
+      <navigator url="../product/product?title=navigate">
+        <i class="iconfont icon-jiantou1"></i>
+        <em>找产品</em>
+      </navigator>
+    </view>
+  </view>
+</template>

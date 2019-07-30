@@ -1,0 +1,13 @@
+.imgtop { }
+.imgtop .swiperhei { background: #efefef; height:200px; }
+.imgtop .swiper-item { background: #efefef; }
+.imgtop .swiper-item image { width:100%; height:200px; }
+
+.con { margin:0px 20px; padding:20px 0px; border-bottom: 1px solid #efefef; }
+.con .name { font-size: 18px; color:#000;}
+.con .tel { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.con .tel i { vertical-align: middle; font-size: 16px; color:#bdbdbd; }
+.con .bottom { display: flex; justify-content: space-between; }
+.con .bottom .addr { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.con .bottom .addr i { vertical-align: middle; font-size: 16px; color:#bdbdbd; }
+.con .bottom .button { width:120px; height:30px; font-size: 14px; color:#fff; background: #ff6669; border-radius: 20px; text-align: center; line-height: 30px; }

@@ -1,0 +1,22 @@
+<!--pages/user/banklist/banklist.wxml-->
+<view class="syk-viewbor" wx:for="{{data}}" wx:key="*this" wx:index="index">
+    <view class="block">
+        <view class="bitem">
+            <view class="hid">{{item.hid}}</view>
+            <view class="name">{{item.realname}}</view>
+            <view class="number">{{item.number}}</view>
+            <view class="jb" bindtap="jbClick" id="{{item.id}}">解绑</view>
+        </view>
+    </view>
+</view>
+<block wx:if="{{data.length < 5}}">
+    <view class="syk-viewbor">
+        <view class="block">
+            <navigator url="../bank/bank">
+                <view class="item">
+                    <i class="iconfont icon-tianjia"></i>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

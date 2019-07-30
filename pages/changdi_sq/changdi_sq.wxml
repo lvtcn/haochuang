@@ -1,0 +1,29 @@
+<view class="syk-backfixed">
+    <form bindsubmit='formSubmit'>
+        <view class="syk-viewbor">
+            <view class="tdleft">标题</view>
+            <view class="tdright">
+                <view class="name x">
+                    {{data.title}}
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor bottom">
+            <view class="tdleft">姓名</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='username' type='text' placeholder='请输入您的姓名' maxlength='8' value="{{data.uname}}"></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">联系手机</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='tel' type='number' placeholder='请输入您的手机号' maxlength='20' value="{{data.mobile}}"></input>
+                </view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>提交</button>
+    </form>
+</view>

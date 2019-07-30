@@ -1,0 +1,11 @@
+/* pages/cashier/cashier.wxss */
+.top { padding:20px; text-align: center; background: #f7f7f7; }
+.top .img image { width:120px; }
+.top .name { margin-top: 5px; font-size: 14px; color:#777777; }
+.top .jiage { margin-top: 5px; font-size: 18px; font-weight: bold; color:#ef4a51; }
+
+.bottom { padding:15px 10px; }
+.bottom button { margin-bottom: 15px; height:40px; line-height: 40px; color:#fff; font-size: 16px;  }
+.bottom button.zhzf { background: #ff4c4e; }
+.bottom button.wxzf { background: #1aad19; }
+.bottom button.yhzx { color:#000; background: #f8f8f8; }

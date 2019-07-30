@@ -1,0 +1,56 @@
+<view class="syk-top">
+    <view class="syk-namesear">
+        <view class="name">找场地</view>
+        <view class="sear">
+            <view>
+                <i class="iconfont icon-search"></i>
+            </view>
+            <view>
+                <input bindinput="watchPassWord" name="k" maxlength='50' class="inp" placeholder='搜索场地'/>
+            </view>
+        </view>
+    </view>
+    <!-- 头部菜单 -->
+    <!--pages/templates/header/header.wxml-->
+    <import src="../templates/header/header" />
+    <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<view class="syk-cata">
+    <view class="text {{num==0?'cur':''}}">
+        <picker value="{{diquid}}" range="{{diquidRange}}" bindchange="PickerBindchange" id="diquid" data-num="0">
+            {{diquidRange[diquid]}}
+        </picker>
+    </view>
+    <view class="text {{num==1?'cur':''}}">
+        <picker value="{{leixingid}}" range="{{leixingidRange}}" bindchange="PickerBindchange" id="leixingid" data-num="1">
+            {{leixingidRange[leixingid]}}
+        </picker>
+    </view>
+</view>
+<view class="container">
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有相关信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                    <view class="img"><image src="{{item.pic}}" mode="aspectFill"></image></view>
+                    <view class="name">{{item.title}}</view>
+                    <view class="tel"><i class="iconfont icon-phone"></i> {{item.tel}}</view>
+                    <navigator url="/pages/changdi_details/changdi_details?id={{item.id}}">
+                        <view class="bottom">
+                            <view class="addr"><i class="iconfont icon-location"></i> {{item.addr}}</view>
+                            <view class="button">场地入驻</view>
+                        </view>
+                    </navigator>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

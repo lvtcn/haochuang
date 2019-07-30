@@ -1,0 +1,70 @@
+<!--pages/user/qiye/qiye.wxml-->
+<form bindsubmit='formSubmit'>
+    <view class="syk-viewbor">
+        <view class="tdleft">联系人</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='username' type='text' value="{{data.username}}" maxlength='8'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">手机号</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='mobile' type='number' value="{{data.mobile}}" maxlength='20'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">固话</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='tel' type='text' value="{{data.tel}}" maxlength='20'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">邮箱</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='email' type='text' value="{{data.email}}" maxlength='20'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor bottom">
+        <view class="tdleft">公司名称</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='title' type='text' value="{{data.title}}" maxlength='50'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor bottom">
+        <view class="tdleft">公司地址</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='addr' type='text' value="{{data.addr}}" maxlength='50'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">公司简介</view>
+        <view class="tdright namearea">
+            <view class="name">
+                <textarea name='about' type='text' maxlength='500' value="{{data.about}}">
+                </textarea>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">公司业务</view>
+        <view class="tdright namearea">
+            <view class="name">
+                <textarea name='yewu' type='text' maxlength='500' value="{{data.yewu}}">
+                </textarea>
+            </view>
+        </view>
+    </view>
+    <button formType='submit' class='syk-submit'>保存</button>
+</form>

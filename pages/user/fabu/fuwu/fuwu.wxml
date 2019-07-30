@@ -1,0 +1,101 @@
+<!--pages/user/fabu/fuwu/fuwu.wxml-->
+<view class="syk-backfixed">
+    <form bindsubmit='formSubmit'>
+        <view class="syk-viewbor">
+            <view class="tdleft">服务分类</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='cid' hidden='true' maxlength='8' value="{{cid.classid == null?0:cid.classid}}"></input>
+                    <view class="syk-select" bindtap="toggleClass" id="cid0" data-num="0" data-value="0">
+                        <view class="text">{{cid1.selectdata[0].classid == null||cid.classname == null?"请选择":""+cid0.selectdata[cid1.num].classname+">"+cid1.selectdata[cid2.num].classname+">"+cid2.selectdata[cid3.num].classname+">"+cid.classname}}</view>
+                        <view class="i">
+                            <i class="iconfont icon-right"></i>
+                        </view>
+                    </view>
+                    <view class="syk-optionback {{toggleClass.MenuShow}}" bindtap="toggleClass" id="qx"></view>
+                    <view class="syk-optionitem {{toggleClass.MenuShow}}">
+                        <view class="xianshi">{{cid1.selectdata[0].classid == null||cid.classname == null?"请选择至四级分类":"已选择: "+cid0.selectdata[cid1.num].classname+">"+cid1.selectdata[cid2.num].classname+">"+cid2.selectdata[cid3.num].classname+">"+cid.classname}}
+                        </view>
+                        <view class="block">
+                            <view class="item">
+                                <block wx:for="{{cid0.selectdata}}" wx:key="*this" wx:index="index">
+                                    <view class="option {{cid1.num==index?'cur':''}}" data-value="{{item.classid}}"
+                                          data-num="{{index}}"
+                                          id="cid1" bindtap="optionClick">{{item.classname}}
+                                    </view>
+                                </block>
+                            </view>
+                            <block wx:if="{{cid1.selectdata[0].classid != null}}">
+                                <view class="item">
+                                    <block wx:for="{{cid1.selectdata}}" wx:key="*this" wx:index="index">
+                                        <view class="option {{cid2.num==index?'cur':''}}" data-value="{{item.classid}}"
+                                              data-num="{{index}}"
+                                              id="cid2" bindtap="optionClick">{{item.classname}}
+                                        </view>
+                                    </block>
+                                </view>
+                            </block>
+                            <block wx:if="{{cid1.selectdata[0].classid != null && cid2.selectdata[0].classid != null}}">
+                                <view class="item">
+                                    <block wx:for="{{cid2.selectdata}}" wx:key="*this" wx:index="index">
+                                        <view class="option {{cid3.num==index?'cur':''}}" data-value="{{item.classid}}"
+                                              data-num="{{index}}"
+                                              id="cid3" bindtap="optionClick">{{item.classname}}
+                                        </view>
+                                    </block>
+                                </view>
+                            </block>
+                            <block wx:if="{{cid1.selectdata[0].classid != null && cid2.selectdata[0].classid != null}}">
+                                <view class="item">
+                                    <block wx:for="{{cid3.selectdata}}" wx:key="*this" wx:index="index">
+                                        <view class="option {{cid.num==index?'cur':''}}" data-value="{{item.classid}}"
+                                              data-text="{{item.classname}}" data-num="{{index}}"
+                                              id="cid" bindtap="optioncheck">{{item.classname}}
+                                        </view>
+                                    </block>
+                                </view>
+                            </block>
+                        </view>
+                        <view class="butt">
+                            <button class="qd" bindtap="toggleClass" id="qd">确定</button>
+                            <button class="qx" bindtap="toggleClass" id="qx">清除</button>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor bottom">
+            <view class="tdleft">服务名称</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='title' type='text' maxlength='30'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewimg">
+            <view class="image" bindtap="uploadImages" id="pic">
+                <input name="pic" hidden="true" value="{{pic.valurl}}"/>
+                <image src='{{pic.url != null?pic.url:"../../../../images/user/wutu.png"}}'
+                       mode="aspectFit"></image>
+                <view class="name">大图</view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">价格</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='jiage' type='number' maxlength='15'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">详情</view>
+            <view class="tdright namearea">
+                <view class="name">
+                    <textarea name='content' type='text' maxlength='500'></textarea>
+                </view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>提交</button>
+    </form>
+</view>

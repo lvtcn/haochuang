@@ -1,0 +1,33 @@
+<!--pages/user/tixian/tixian.wxml-->
+<!--pages/user/bank/bank.wxml-->
+<view class="syk-backfixed">
+  <form bindsubmit='formSubmit'>
+    <view class="syk-viewbor">
+      <view class="tdleft">提现金额</view>
+      <view class="tdright">
+        <view class="name">
+          <input name='lamount' type='text' placeholder='请输入您的提现金额' maxlength='8'></input>
+        </view>
+      </view>
+    </view>
+    <view class="syk-viewbor bottom">
+      <view class="tdright">
+        <view class="name">
+          <picker value="{{bankid}}" range="{{bankidRange}}" id="bankid" name="bankid" class="pickerc"
+                  bindchange="PickerBindchange">
+            {{bankidRange[bankid]}}
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="syk-viewbor bottom">
+      <view class="tdleft">可提现金额</view>
+      <view class="tdright">
+        <view class="name">
+          {{jine}}
+        </view>
+      </view>
+    </view>
+    <button formType='submit' class='syk-submit'>提交</button>
+  </form>
+</view>

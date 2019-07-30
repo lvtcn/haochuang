@@ -1,0 +1,5 @@
+.syk-scrolist { background: #f3f8fc; }
+.list .li { display: flex; justify-content: space-between; padding:10px; background: #fff; font-size: 16px; color:#000; }
+.list .li .touxiang { display: flex; align-items: center; width:50px; height:50px; overflow: hidden; border-radius: 50%; }
+.list .li .touxiang image { height:50px; width:50px; border-radius: 50%;  }
+.list .li .name { font-size: 16px; flex: 1; margin-left: 10px; line-height: 50px; height:50px; border-bottom: 1px solid #efefef; margin-bottom: 5px; }

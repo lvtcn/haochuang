@@ -1,0 +1,20 @@
+<view class="container">
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有找到相关报名信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                <view class="touxiang"><image src="{{item.touxiang}}" mode="widthFix"></image></view>
+                <view class="name">{{item.uname}}</view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

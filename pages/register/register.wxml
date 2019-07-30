@@ -1,0 +1,65 @@
+<!--pages/register/register.wxml-->
+<view class='syk-register'>
+    <view class='title'>用户注册</view>
+    <form bindsubmit='formSubmit'>
+        <form bindsubmit='formSms'>
+            <input hidden='true' name='token' value='{{token}}'></input>
+            <view class='syk-block'>
+                <view class='syk-inp'>
+                    <view class='inptext'>
+                        <input id='mobile' type='number' name='mobile' placeholder='请输入手机号' maxlength='20'
+                               value=''></input>
+                    </view>
+                </view>
+            </view>
+            <view class='syk-block'>
+                <view class='syk-inp'>
+                    <view class='inptext'>
+                        <input name='smscode' type='number' placeholder='请输入手机验证码' maxlength='10'></input>
+                    </view>
+                    <button class='button {{addClass}}' formType='{{submit}}'>{{smsdom}}</button>
+                </view>
+            </view>
+        </form>
+        <view class='syk-block'>
+            <view class='syk-inp'>
+                <view class='inptext'>
+                    <input name='upass' type='password' placeholder='请输入密码,长度为6-18位' maxlength='18'></input>
+                </view>
+            </view>
+        </view>
+        <view class='syk-block'>
+            <view class='syk-inp'>
+                <view class='inptext'>
+                    <input name='reupass' type='password' placeholder='请再次输入密码' maxlength='18'></input>
+                </view>
+            </view>
+        </view>
+        <view class='syk-block'>
+            <view class='syk-em'>
+                <view class='icon'>
+                    <checkbox-group name="xieyi">
+                        <label>
+                            <checkbox value="1"/>
+                        </label>
+                    </checkbox-group>
+                </view>
+                <view class='name'>
+                    <navigator url=''>我已经认真阅读并同意
+                        <span>《用户注册协议》</span>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>立即注册</button>
+        <view class='syk-block'>
+            <view class='syk-em'>
+                <view class='name'>
+                    <navigator url='../binding/binding'>已经注册，请
+                        <span>绑定账号</span>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </form>
+</view>

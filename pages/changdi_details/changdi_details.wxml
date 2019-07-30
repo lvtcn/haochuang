@@ -1,0 +1,54 @@
+<view class="imgtop">
+    <swiper class="swiperhei" indicator-dots="{{Banner.indicatorDots}}" autoplay="{{Banner.autoplay}}"
+            circular="{{Banner.circular}}" vertical="{{Banner.vertical}}" interval="{{Banner.interval}}"
+            duration="{{Banner.duration}}" previous-margin="{{Banner.previousMargin}}px"
+            next-margin="{{Banner.nextMargin}}px">
+        <block wx:for="{{data.pics}}" wx:key="*this">
+            <swiper-item>
+                <view class="swiper-item">
+                    <image src="{{item.pic}}" class="img" mode='aspectFill'></image>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>
+<view class="con">
+<view class="name">{{data.title}}</view>
+<view class="bottom">
+    <view class="addr">
+        <i class="iconfont icon-location"></i>
+        {{data.addr}}
+    </view>
+</view>
+<view class="tel" bindtap="calling">
+    <i class="iconfont icon-phone"></i>
+    {{data.tel}}
+</view>
+</view>
+<view class="syk-content">
+<import src="../../static/wxParse/wxParse.wxml"/>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+</view>
+<view class="syk-deta-footer">
+<view class="tdleft">
+    <view class="icon {{scstatus==1?'cur':''}}" bindtap="shoucang" data-scstatus="{{scstatus}}">
+        <view class="i">
+            <i class="iconfont icon-star"></i>
+        </view>
+        <view class="name">收藏</view>
+    </view>
+    <view class="icon" bindtap="calling">
+        <view class="i">
+            <i class="iconfont icon-phone"></i>
+        </view>
+        <view class="name">咨询</view>
+    </view>
+</view>
+<view class="tdright">
+    <navigator url="../changdi_sq/changdi_sq?id={{data.id}}" class="button">
+        我要申请
+    </navigator>
+</view>
+</view>

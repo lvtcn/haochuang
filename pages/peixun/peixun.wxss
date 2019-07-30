@@ -1,0 +1,12 @@
+.syk-scrolist { margin-top: 61px; }
+.list { padding:0px 10px; }
+.list .li { padding:20px 0px; border-bottom: 0.01em solid #efefef; }
+.list .li .title { font-size: 16px; font-weight: bold; color:#000; }
+.list .li .rj { margin-top: 10px; display: flex; justify-content: space-between; font-size: 12px; color:#696969; }
+.list .li .rj .jiage { font-size: 16px; color:#ff6669; }
+.list .li .rj span { padding-left: 10px; color:#ff6766; }
+
+.list .li .time { height:25px; line-height: 25px; margin-top: 5px; display: flex; justify-content: space-between; font-size: 12px; color:#696969; }
+.list .li .time .djs { font-size: 16px; color:#ff6669; }
+.list .li .addr { margin-top: 5px; display: flex; justify-content: space-between; font-size: 12px; color:#696969; vertical-align: middle; line-height: 30px; }
+.list .li .button { width:120px; height:30px; font-size: 14px; color:#fff; background: #ff6669; border-radius: 20px; text-align: center; line-height: 30px; }

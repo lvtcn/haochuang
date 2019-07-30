@@ -1,0 +1,8 @@
+.top { display: flex; padding:10px; height:100px; border-bottom: 5px solid #eeedf3; justify-content: space-between; }
+.top .img { margin-right: 10px; }
+.top .img image { border-radius: 10px; width:120px; height:100px; }
+.top .con { flex: 1; }
+.top .con .title { font-size: 16px; color:#000; margin-top: 5px; }
+.top .con .subtitle { font-size: 14px; color:#555555; margin-top: 5px; }
+.top .con .addr { font-size: 12px; color:#9b9b9b; margin-top: 5px; }
+.top .con .jiage { margin-top: 5px; font-size: 18px; font-weight: bold; color:#ef4a51; }

@@ -1,0 +1,13 @@
+.top .img { background: #efefef; }
+.top .img image { border-radius: 10px; width:100%; height:200px; }
+
+.con .title { padding:0px 15px; margin-top: 20px; font-size: 16px; font-weight: bold; color:#000; }
+
+.list { padding:10px; }
+.list .li { display: flex; border-bottom: 0.01em solid #ededef; height:50px; line-height: 50px; justify-content: space-between; font-size: 14px; }
+.list .li .dd1 { display: flex; color:#6d6d6d; width:150px; }
+.list .li .dd1 i { font-size: 16px; color:#a5a5a5; }
+.list .li .dd1 .name { margin-left: 10px; }
+.list .li .dd2 { text-align: right; display: flex; color:#000; }
+.list .li .dd2.yiyou { color:#989898 }
+.list .li .dd2.yiyou i { color:#989898; font-size: 14px; margin-left: 5px; }

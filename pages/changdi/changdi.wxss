@@ -1,0 +1,10 @@
+.syk-scrolist { margin-top: 105px; }
+.list .li { padding:20px; border-bottom: 0.01em solid #efefef; }
+.list .li .img image { width:100%; height:200px; }
+.list .li .name { font-size: 18px; color:#000; margin-top: 10px; }
+.list .li .tel { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.list .li .tel i { vertical-align: middle; font-size: 18px; color:#bdbdbd; }
+.list .li .bottom { display: flex; justify-content: space-between; }
+.list .li .bottom .addr { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.list .li .bottom .addr i { vertical-align: middle; font-size: 18px; color:#bdbdbd; }
+.list .li .bottom .button { width:120px; height:30px; font-size: 14px; color:#fff; background: #ff6669; border-radius: 20px; text-align: center; line-height: 30px; }

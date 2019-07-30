@@ -1,0 +1,9 @@
+.list { padding:0px 10px; }
+.list .li { display: flex; justify-content: space-between; height:100px; padding:10px 0px; }
+.list .li .tdleft { margin-right: 10px; }
+.list .li .tdleft image { width:120px; height:100px; }
+.list .li .tdright { position: relative; flex: 1; border-bottom: 0.01em solid #efefef; }
+.list .li .tdright .title { display: flex; justify-content: space-between; font-size: 16px; font-weight: bold; color:#000; }
+.list .li .tdright .title .i i { font-size: 14px; color:#ff4c4e; }
+.list .li .tdright .jiage  { font-size: 20px; font-weight: bold; color:#ef4a51; margin-top: 5px; }
+.list .li .tdright .button { position: absolute; right:0px; bottom:10px; font-size: 12px; color:#fc7f13; width:80px; height:30px; text-align: center; line-height: 30px; margin-top: 5px; float:right; border:0.01em solid #fc7f13; border-radius: 20px; }

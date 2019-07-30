@@ -1,0 +1,54 @@
+
+
+/* banner图配置 */
+.syk-banner-swiper { position: relative; }
+.syk-banner-swiper .img { width:100%; height:200px; }
+.syk-banner-swiper .swiperhei { height:200px; }
+
+/* 搜索配置 */
+.syk-sear { display: none; justify-content: space-between; width:90%; height:50px; background-color: #fff; border-radius: 10px; position: absolute; left:50%; margin-left: -45%; bottom:-25px; }
+.syk-sear i { width:30px; margin-right: 10px; font-size: 26px; line-height: 50px; height:50px; margin-left: 20px; }
+.syk-sear .inp { flex: 1; font-weight: 400; }
+.syk-sear .inp input { width:90%; font-size: 16px; line-height: 50px; height:50px; }
+/* 搜索end */
+
+.syk-container { padding-top:20px;background-color: #f6f7f9; }
+.syk-container .colunmlist { padding:0px 3%; border-radius: 10px; width:94%; margin:0px auto; background-color: #fff; display: flex; flex-wrap: wrap; }
+.syk-container .colunmlist .item { margin-top: 10px; margin-bottom: 10px; width:20%; height:60px; text-align: center; }
+.syk-container .colunmlist .item .icon { height:30px; width:100%; }
+.syk-container .colunmlist .item .span { font-size: 14px; color:#666; }
+
+/* 公共首页标题 */
+.syk-block { padding:10px 20px; background: #ffff; margin-top:20px; }
+.syk-block .title { border-bottom:0.01em solid #efefef; padding-bottom: 10px; display: flex; justify-content: space-between; height:25px; line-height: 25px; }
+.syk-block .title .name { font-size: 18px; font-weight: bold; color:#404040; }
+.syk-block .title .more { font-size: 16px; color:#666;  }
+
+/* 最新政策 */
+.syk-zhengce .list { margin-top: 20px; }
+.syk-zhengce .list .li { border-bottom:0.01em dashed #efefef; padding-bottom: 10px; margin-bottom: 10px; font-size:14px; color:#404040; }
+
+/* 创客空间 */
+.syk-ckkj .list { margin-top: 10px; }
+.syk-ckkj .list .img { background: #efefef; height:160px; }
+.syk-ckkj .list .img image { height:160px; width:100%; }
+.syk-ckkj .list .name { font-size: .9em; color:#404040; margin-top: 10px; }
+.syk-ckkj .list .dmore { display: flex; justify-content: space-between; margin-top: 20px; }
+.syk-ckkj .list .dmore .addr i { font-size: 0.9em; color:#666;}
+.syk-ckkj .list .dmore .addr span { font-size: 0.8em; color:#666; }
+.syk-ckkj .list .dmore .ruzhu {  height:25px; line-height:25px; padding:3px 10px; background: #ff4c4e; border-radius: 5px; color:#fff; font-size: 14px; }
+
+/* 推荐服务 */
+.syk-tjfw .list { margin-top: 10px; }
+.syk-tjfw .list .li { display: flex; justify-content: space-between; padding:15px 0px; border-bottom:1px dashed #efefef; }
+.syk-tjfw .list .li .icon { width:30px; margin-right: 10px; }
+.syk-tjfw .list .li .icon image { width:30px; height:25px; }
+.syk-tjfw .list .li .item { display: flex; justify-content: space-between; flex: 1;}
+.syk-tjfw .list .li .item .name .mingcheng { font-size: 16px; color:#404040; margin-bottom: 10px; }
+.syk-tjfw .list .li .item .name .jx { display: flex; }
+.syk-tjfw .list .li .item .name .jx .dd1 { font-size: .7em; color:#ff4c4e; margin-right: 30px; }
+.syk-tjfw .list .li .item .name .jx .dd2 { font-size: .7em; color:#919191; }
+.syk-tjfw .list .li .item .more { margin-top: 10px; height:25px; line-height:25px; padding:3px 10px;background:#ff4c4e;border-radius:5px;color:#fff;font-size:14px;}
+
+/* 企业活动 */
+.syk-qyhd .img { width:100%; height:200px; }

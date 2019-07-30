@@ -1,0 +1,6 @@
+.top .img { background: #efefef; }
+.top .img image { border-radius: 10px; width:100%; height:200px; }
+
+.con { display: flex; justify-content: space-between; padding:0px 15px; margin-top: 20px;}
+.con .title { font-size: 16px; font-weight: bold; color:#000; }
+.con .jiage { font-size: 18px; color:#ff6669; }

@@ -1,0 +1,90 @@
+  {
+  "pages":[
+    "pages/index/index",
+    "pages/user/index/index",
+    "pages/user/zhanghu/zhanghu",
+    "pages/user/chongzhi/chongzhi",
+    "pages/user/tixian/tixian",
+    "pages/user/geren/geren",
+    "pages/user/qiye/qiye",
+    "pages/user/renzheng/renzheng",
+    "pages/user/rzgeren/rzgeren",
+    "pages/user/rzqiye/rzqiye",
+    "pages/user/fabu/fuwu/fuwu",
+    "pages/user/fabu/huodong/huodong",
+    "pages/user/bank/bank",
+    "pages/user/banklist/banklist",
+    "pages/user/jinbi/jinbi",
+    "pages/user/jifen/jifen",
+    "pages/user/zijin/zijin",
+    "pages/user/shoucang/shoucang",
+    "pages/user/order/order",
+    "pages/user/baoming/baoming",
+    "pages/fuwu/fuwu",
+    "pages/fuwu_details/fuwu_details",
+    "pages/peixun/peixun",
+    "pages/peixun_bm/peixun_bm",
+    "pages/peixun_details/peixun_details",
+    "pages/pingce/pingce",
+    "pages/pingce_details/pingce_details",
+    "pages/changdi/changdi",
+    "pages/changdi_details/changdi_details",
+    "pages/changdi_sq/changdi_sq",
+    "pages/huodong/huodong",
+    "pages/huodong_details/huodong_details",
+    "pages/huodong_bm/huodong_bm",
+    "pages/product/product",
+    "pages/product_details/product_details",
+    "pages/zhengce/zhengce",
+    "pages/zijin/zijin",
+    "pages/zijin_bm/zijin_bm",
+    "pages/zijin_details/zijin_details",
+    "pages/xiangmu/xiangmu",
+    "pages/xiangmu_details/xiangmu_details",
+    "pages/templates/header/header",
+    "pages/register/register",
+    "pages/binding/binding",
+    "pages/order/order",
+    "pages/cashier/cashier",
+    "pages/bmlist/bmlist",
+    "pages/chuangye/chuangye",
+    "pages/map/map",
+    "pages/article/index/index",
+    "pages/article/details/details"
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "亳州创业共享平台",
+    "navigationBarTextStyle":"black"
+  },
+
+  "tabBar": {
+    "backgroundColor":"#fff",
+    "color":"#7f8386",
+    "selectedColor": "#ee4950",
+    
+    "list": [
+      {
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "./images/home-cur.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "./images/fuwu.png",
+        "selectedIconPath":"./images/fuwu-cur.png",
+        "pagePath": "pages/fuwu/fuwu",
+        "text": "服务"
+      },
+      {
+        "iconPath": "./images/wode.png",
+        "selectedIconPath": "./images/wode-cur.png",
+        "pagePath": "pages/user/index/index",
+        "text": "我的"
+      }
+    ]
+  }
+}
+

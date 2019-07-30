@@ -1,0 +1,36 @@
+<!--pages/user/rzgeren/rzgeren.wxml-->
+<view class="syk-backfixed">
+    <form bindsubmit='formSubmit'>
+        <view class="syk-viewimg">
+            <view class="image" bindtap="uploadImages" id="sfzzmpic">
+                <input name="sfzzmpic" hidden="true" value="{{sfzzmpic.valurl}}"/>
+                <image src='{{sfzzmpic.url != null?sfzzmpic.url:"../../../images/user/sz.jpg"}}'
+                       mode="aspectFit"></image>
+                <view class="name">身份证正面</view>
+            </view>
+            <view class="image" bindtap="uploadImages" id="zfzfmpic">
+                <input name="zfzfmpic" hidden="true" value="{{zfzfmpic.valurl}}"/>
+                <image src='{{zfzfmpic.url != null?zfzfmpic.url:"../../../images/user/sz.jpg"}}'
+                       mode ="aspectFit"></image>
+                <view class="name">身份证反面</view>
+            </view>
+        </view>
+        <view class="syk-viewbor bottom">
+            <view class="tdleft">真实姓名</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='relaname' type='text' placeholder='请输入您的真实姓名' maxlength='8'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">身份证号</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='sfzh' type='idcard' placeholder='请输入您的身份证号' maxlength='50'></input>
+                </view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>提交</button>
+    </form>
+</view>

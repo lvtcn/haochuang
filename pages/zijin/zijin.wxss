@@ -1,0 +1,9 @@
+.syk-scrolist { margin-top: 105px; }
+.list .li { padding:20px; border-bottom: 0.01em solid #efefef; }
+.list .li .img image { width:100%; height:200px; }
+.list .li .name { font-size: 18px; color:#000; margin-top: 10px; }
+.list .li .name span { font-size: 20px; font-weight: bold; padding-left: 10px; color:#ee495a; }
+.list .li .tel { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.list .li .bottom { display: flex; justify-content: space-between; }
+.list .li .bottom .subtitle { font-size: 14px; color:#ee495a; margin-top: 10px; }
+.list .li .bottom .button { width:120px; height:30px; font-size: 14px; color:#ee495a; border:1px solid #ee495a; border-radius: 20px; text-align: center; line-height: 30px; }

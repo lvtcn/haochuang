@@ -1,0 +1,22 @@
+<!--pages/user/zhanghu/zhanghu.wxml-->
+<view class="zhanghu syk-backfixed">
+    <view class="back">
+        <view class="block">
+            <view class="mobile">账户：{{pcuserInfo.mobile}}
+                <span>VIP1</span>
+            </view>
+            <view class="jine">余额：<span>{{pcuserInfo.jine}}</span>
+            </view>
+        </view>
+        <view class='chongzhi'>
+            <navigator class='button cz' url="../chongzhi/chongzhi">
+                充值
+            </navigator>
+            <block wx:if="{{pcuserInfo.isok==2 && pcuserInfo.lxisok==2}}">
+            <navigator class='button tx' url="../tixian/tixian">
+                提现
+            </navigator>
+            </block>
+        </view>
+    </view>
+</view>

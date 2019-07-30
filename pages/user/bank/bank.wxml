@@ -1,0 +1,41 @@
+<!--pages/user/bank/bank.wxml-->
+<view class="syk-backfixed">
+    <form bindsubmit='formSubmit'>
+        <view class="syk-viewbor">
+            <view class="tdleft">真实姓名</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='realname' type='text' placeholder='请输入您的真实姓名' maxlength='8'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">银行卡号</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='number' type='number' placeholder='请输入您的银行卡号' maxlength='18'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">银行类型</view>
+            <view class="tdright">
+                <view class="name">
+                    <picker value="{{hid}}" range="{{hidRange}}" id="hid" name="hid"
+                            bindchange="PickerBindchange">
+                        {{hidRange[hid]}}
+                    </picker>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor bottom">
+            <view class="tdleft">手机号</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='tel' type='number' placeholder='请输入您的手机号' maxlength='30'></input>
+                </view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>提交</button>
+    </form>
+</view>

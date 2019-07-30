@@ -1,0 +1,139 @@
+<!-- pages/index/index.wxml -->
+<!-- 头部 -->
+<view class="page {{pageshow}}">
+<view class="syk-header">
+  <view class="logo">
+    <image src="../../images/logo.jpg" mode="aspectFit"></image>
+  </view>
+  <!-- 头部菜单 -->
+  <!--pages/templates/header/header.wxml-->
+  <import src="../templates/header/header" />
+  <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<!-- 大图 -->
+<view class="syk-banner-swiper">
+  <swiper class="swiperhei" indicator-dots="{{Banner.indicatorDots}}" autoplay="{{Banner.autoplay}}" circular="{{Banner.circular}}" vertical="{{Banner.vertical}}" interval="{{Banner.interval}}" duration="{{Banner.duration}}" previous-margin="{{Banner.previousMargin}}px"
+    next-margin="{{Banner.nextMargin}}px">
+    <block wx:for="{{data.bannerdata}}" wx:key="*this" wx:index="index">
+      <swiper-item>
+        <view class="swiper-item">
+          <image src="{{item.pic}}" class="img" mode='aspectFill'></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="syk-sear">
+    <i class="iconfont icon-search"></i>
+    <view class="inp">
+      <input name="k" maxlength='50' placeholder='请输入您想要搜索的内容' />
+    </view>
+  </view>
+</view>
+<!-- 首页 -->
+<view class="syk-container">
+  <view class="colunmlist">
+    <block wx:for="{{colunmlist}}" wx:key="*this" wx:index="index">
+      <view class="item" bindtap="hrefClick" id="{{index}}">
+          <image class="icon" src="{{item.iconsrc}}" mode='aspectFit'></image>
+          <view class="span">{{item.classname}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 最新政策 -->
+  <view class="syk-zhengce syk-block">
+    <view class="title">
+      <view class="name">最新政策</view>
+      <view class="more">
+        <navigator url="../zhengce/zhengce">更多 ></navigator>
+      </view>
+    </view>
+    <view class="list">
+      <block wx:for="{{data.zxzcdata}}" wx:key="*this" wx:index="index">
+        <view class="li">
+          <navigator url="/pages/article/details/details?id={{item.id}}">{{item.title}}</navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 创客空间 -->
+  <view class="syk-ckkj syk-block">
+    <view class="title">
+      <view class="name">创客空间</view>
+      <view class="more">
+        <navigator url="../changdi/changdi">更多 ></navigator>
+      </view>
+    </view>
+    <view class="list">
+      <navigator url="/pages/changdi_details/changdi_details?id={{data.changdidata[0].id}}">
+      <view class="img">
+        <image src="{{data.changdidata[0].pic}}" mode='aspectFill'></image>
+      </view>
+      </navigator>
+      <view class="name">{{data.changdidata[0].title}}</view>
+      <view class="dmore">
+        <navigator url="/pages/map/map?keywords={{data.changdidata[0].addr}}" class="addr">
+          <i class="iconfont icon-location"></i>
+          <span>{{data.changdidata[0].addr}}</span>
+        </navigator>
+        <view class="ruzhu">
+          <navigator url="/pages/changdi_details/changdi_details?id={{data.changdidata[0].id}}">我要入驻</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐服务 -->
+  <view class="syk-tjfw syk-block">
+    <view class="title">
+      <view class="name">推荐服务</view>
+      <view class="more">
+        <view bindtap="switnavi">更多 ></view>
+      </view>
+    </view>
+    <view class="list">
+      <block wx:for="{{data.fuwudata}}" wx:index="index" wx:key="*this">
+      <view class="li">
+        <view class="icon">
+          <image src="../../images/images1.jpg"></image>
+        </view>
+        <view class="item">
+          <navigator url="../fuwu_details/fuwu_details?id={{item.id}}'">
+          <view class="name">
+            <view class="mingcheng">{{item.title}}</view>
+            <view class="jx">
+              <view class="dd1">￥{{item.jiage}}</view>
+              <view class="dd2"></view>
+            </view>
+          </view>
+          </navigator>
+          <view class="more">
+            <navigator url="../fuwu_details/fuwu_details?id={{item.id}}'">了解更多</navigator>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+  <!-- 企业活动 -->
+  <view class="syk-qyhd syk-block">
+    <view class="title">
+      <view class="name">企业活动</view>
+      <view class="more">
+        <navigator url="../huodong/huodong">更多 ></navigator>
+      </view>
+    </view>
+    <view class="list">
+      <swiper class="swiperhei" indicator-dots="{{Banner.indicatorDots}}" autoplay="{{Banner.autoplay}}" circular="{{Banner.circular}}" vertical="{{Banner.vertical}}" interval="{{Banner.interval}}" duration="{{Banner.duration}}" previous-margin="0px" next-margin="0px">
+        <block wx:for="{{data.huodongdata}}" wx:index="index" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item">
+              <navigator url="/pages/huodong_details/huodong_details?id={{item.id}}">
+              <image src="{{item.pic}}" class="img" mode='aspectFill'></image>
+              </navigator>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>
+</view>

@@ -1,0 +1,25 @@
+/* pages/user/geren/geren.wxss */
+.syk-viewimg .image image { padding:5px; border:0.01em solid #dedede; max-height: 80px; width:80px; border-radius: 50%; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

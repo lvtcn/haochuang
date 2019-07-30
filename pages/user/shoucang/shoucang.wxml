@@ -1,0 +1,40 @@
+<view class="container">
+    <!--垂直滚动，这里必须设置高度-->
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+                 class="syk-scrolist" bindscrolltolower="bindDownLoad">
+        <view class="list">
+            <block wx:if="{{infodata.length == 0 && list == 0}}">
+                <view class="syk-datanone">
+                    <image src="/images/wushuju.png" mode="widthFix"></image>
+                    <view>抱歉，没有找到相关报名信息 ！</view>
+                </view>
+            </block>
+            <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+                <view class="li">
+                    <navigator url="../../{{item.model}}_details/{{item.model}}_details?id={{item.aid}}">
+                        <view class="tdleft {{numhide+index}}">
+                            <image src="{{item.pic}}" mode="aspectFill"></image>
+                        </view>
+                    </navigator>
+                    <view class="tdright">
+                        <view class="title">
+                            <view>{{item.title}}</view>
+                            <view class="i" bindtap="del" id="{{item.id}}">
+                                <i class="iconfont icon-delete"></i>
+                            </view>
+                        </view>
+                        <view class="jiage">
+                            <block wx:if="{{item.jiage != null}}">
+                                ￥{{item.jiage}}
+                            </block>
+                        </view>
+                        <navigator url="../../{{item.model}}_details/{{item.model}}_details?id={{item.aid}}"
+                                   class="button">
+                            了解详情 >
+                        </navigator>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>

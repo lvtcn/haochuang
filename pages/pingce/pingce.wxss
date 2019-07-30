@@ -1,0 +1,10 @@
+.banner { margin-top: 61px; border-bottom: 5px solid #f2f2f2; width:100%; }
+
+.syk-scrolist { }
+.list { padding:0px 10px; }
+.list .li { display: flex; justify-content: space-between; padding:20px 0px; border-bottom: 0.01em solid #efefef; }
+.list .li .tdleft { margin-right: 20px; }
+.list .li .tdleft .title { font-size: 16px; font-weight: bold; color:#000; }
+.list .li .tdleft .desc { margin-top: 5px; font-size: 12px; line-height: 25px; color:#474747; }
+.list .li .tdright { display: flex; align-items: center; }
+.list .li .tdright .button { width:100px; height:35px; font-size: 14px; color:#fff; background: #ff4c4f; border-radius: 10px; text-align: center; line-height: 35px; }

@@ -1,0 +1,46 @@
+<view class="syk-top">
+    <view class="syk-namesear">
+        <view class="name">找资金</view>
+    </view>
+    <!-- 头部菜单 -->
+    <!--pages/templates/header/header.wxml-->
+    <import src="../templates/header/header" />
+    <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<view class="syk-cata {{moreClick.MenuShow}}">
+<block wx:for="{{catalistdata}}" wx:index="index" wx:key="*this">
+    <view class="text {{num==index?'cur':''}}" bindtap="cataClic" id="{{item.classid}}" data-num='{{index}}'>
+        {{item.classname}}
+    </view>
+</block>
+<block wx:if="{{catalistdata.length > 4}}">
+    <view class="jiatou"><i class="iconfont {{moreClick.MenuShow == 'hide'?'icon-next':'icon-xla'}}" bindtap="moreClick" id="moreClick"></i></view>
+</block>
+</view>
+<view class="container">
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有相关信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                <view class="img"><image src="{{item.pic}}" mode="aspectFill"></image></view>
+                <view class="name">{{item.title}} <span>（{{item.jine}}）</span></view>
+                <view class="tel">{{item.tel}}</view>
+                <navigator url="/pages/zijin_details/zijin_details?id={{item.id}}">
+                    <view class="bottom">
+                        <view class="subtitle">{{item.subtitle}}</view>
+                        <view class="button">查看详情</view>
+                    </view>
+                </navigator>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

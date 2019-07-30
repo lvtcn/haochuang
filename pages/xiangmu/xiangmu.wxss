@@ -1,0 +1,11 @@
+.syk-scrolist { background: #f3f8fc; margin-top: 105px; }
+.list .li { display: flex; justify-content: space-between; padding:10px 20px; border-bottom: 0.01em solid #efefef; background: #fff; margin-bottom: 10px; }
+.list .li .tdleft { background: #efefef; margin-right: 10px; height:100px; }
+.list .li .tdleft image { width:150px; height:100px; }
+.list .li .tdright { flex: 1; }
+.list .li .tdright .name { font-size: 18px; color:#000; }
+.list .li .tdright .hits { text-align: right; font-size: 14px; color:#666; margin-top: 10px; }
+.list .li .tdright .name i { vertical-align: middle; margin-left: 10px; margin-right: 5px; font-size: 18px; }
+.list .li .tdright .leibie { margin-right: 10px; color:#ed5155; font-size: 12px; }
+.list .li .tdright .bottom { display: flex; justify-content: flex-end; margin-top: 10px; }
+.list .li .tdright .bottom .button { width:100px; height:30px; font-size: 14px; color:#fff; background: #ef4a51; border-radius: 20px; text-align: center; line-height: 30px; }

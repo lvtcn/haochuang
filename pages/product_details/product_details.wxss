@@ -1,0 +1,14 @@
+.top .img { text-align: center; }
+.top .img image { border-radius: 10px; height:200px; }
+
+.con { display: flex; justify-content: space-between; margin:0px 20px; padding:20px 0px; border-bottom: 1px solid #efefef; }
+.con .name { font-size: 18px; color:#000;}
+.con .tel { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.con .tel i { vertical-align: middle; font-size: 16px; color:#bdbdbd; }
+.con .addr { font-size: 14px; color:#bdbdbd; margin-top: 10px; }
+.con .addr i { vertical-align: middle; font-size: 16px; color:#bdbdbd; }
+.con .jiage { font-size: 16px; font-weight: bold; margin-top: 10px; color:#d61317; }
+.con .jiage span { font-size: 12px; padding-left: 20px; }
+.con .tdright { text-align: right; }
+.con .tdright image { width:90px; }
+.con .tdright .hits { margin-top: 10px; font-size: 14px; color:#9a9a9a; }

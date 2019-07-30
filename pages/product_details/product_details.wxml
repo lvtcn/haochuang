@@ -1,0 +1,49 @@
+<view class="top">
+    <view class="img">
+        <image src="{{data.pic}}" mode="widthFix"></image>
+    </view>
+</view>
+<view class="con">
+<view class="tdleft">
+    <view class="name">{{data.title}}</view>
+    <view class="tel" bindtap="calling">
+        <i class="iconfont icon-phone"></i>
+        联系方式
+        {{data.tel}}
+    </view>
+    <view class="addr">
+        <i class="iconfont icon-location"></i>
+        商家地点：
+        {{data.addr}}
+    </view>
+    <view class="jiage">
+        ￥ {{data.jiage}} <span>{{data.shangjia}}</span>
+    </view>
+</view>
+<view class="tdright">
+    <image src="{{data.logo}}" mode="widthFix" class="logo"></image>
+    <view class="hits">（人气 {{data.hits}}）</view>
+</view>
+</view>
+<view class="syk-content">
+<view class="stk-content-pos">产品详情</view>
+<import src="../../static/wxParse/wxParse.wxml"/>
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+</view>
+</view>
+<view class="syk-deta-footer">
+<view class="tdleft">
+    <view class="icon {{scstatus==1?'cur':''}}" bindtap="shoucang" data-scstatus="{{scstatus}}">
+        <view class="i">
+            <i class="iconfont icon-star"></i>
+        </view>
+        <view class="name">收藏</view>
+    </view>
+</view>
+<view class="tdright">
+    <view bindtap="calling" class="button">
+        联系咨询
+    </view>
+</view>
+</view>

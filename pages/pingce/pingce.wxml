@@ -1,0 +1,39 @@
+<view class="syk-top">
+    <view class="syk-namesear">
+        <view class="name">找评测</view>
+    </view>
+    <!-- 头部菜单 -->
+    <!--pages/templates/header/header.wxml-->
+    <import src="../templates/header/header"/>
+    <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<block wx:if="{{catadata.img != null}}">
+    <image src="{{catadata.img}}" mode="widthFix" class="banner"></image>
+</block>
+<view class="container">
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有相关信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                <navigator url="../article/details/details?id={{item.id}}">
+                <view class="tdleft">
+                    <view class="name">{{item.title}}</view>
+                    <view class="desc">{{item.description}}</view>
+                </view>
+                </navigator>
+                <view class="tdright">
+                    <navigator url="../pingce_details/pingce_details?id={{item.id}}" class="button">我要评测</navigator>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

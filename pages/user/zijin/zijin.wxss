@@ -1,0 +1,9 @@
+.list .tr { display: flex; justify-content: space-between; }
+.list .tr .td { width:25%; text-align: center; height:35px; line-height: 35px; font-size: 14px; }
+.list .tr.head { color:#000; background: #f4f4f4; border:1px solid #dedede; border-bottom: none; }
+.list .body { border:1px solid #efefef; }
+.list .tr { color:#666; border-bottom: none; }
+.list .tr .td { font-size: 12px; color:#404040; border:1px solid #efefef; border-right:none; border-top:none;}
+.list .tr .td.jine { color:#f40f04; }
+.list .tr:last-child .td { border-bottom:none; }
+.list .tr .td:last-child { border-right: 1px solid #efefef; }

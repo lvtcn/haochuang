@@ -1,0 +1,29 @@
+<!--pages/cashier/cashier.wxml-->
+<view class="syk-backfixed">
+    <view class="top">
+        <view class="img">
+            <image src="../../images/user/cashier.jpg" mode="widthFix"></image>
+        </view>
+        <view class="name">
+            需付款金额
+        </view>
+        <view class="jiage">
+            ￥{{data.jiage}}
+        </view>
+    </view>
+    <view class="syk-viewbor bottom">
+        <view class="tdleft">订单编号</view>
+        <view class="tdright">
+            <view class="name x">
+                {{data.order.ordernumber}}
+            </view>
+        </view>
+    </view>
+    <view class="bottom">
+        <block wx:if="{{data.order.shopname != 'chongzhi'}}">
+            <button class="zhzf" bindtap="payUser">账户余额支付</button>
+        </block>
+        <button class="wxzf" bindtap="payment">微信支付</button>
+        <button class="yhzx" bindtap="clickHref">去用户中心</button>
+    </view>
+</view>

@@ -1,0 +1,18 @@
+/* pages/user/renzheng/renzheng.wxss */
+.syk-flexcenter { margin:0px auto; padding-top: 20px; padding-bottom: 20px; background: #fff; }
+.syk-block  { border-radius: 5px; background: #fff; width:80%; padding:10px 5%; margin:0px auto 20px auto; display: flex; border:0.01em solid #dedede; justify-content: space-around; }
+.syk-block .img { }
+.syk-block .img image { width:79px; height:107px; }
+.syk-block .con .name { margin-top: 13px; font-size: 16px; color:#404040; }
+.syk-block .con .subname { margin-top: 10px; font-size: 14px; color:#404040; }
+.syk-block .con .butticon { margin-top: 10px; display: flex; line-height: 35px;}
+.syk-block .con .butticon .icon { margin-left: 10px; font-size: 12px; }
+.syk-block .con .butticon .icon image { margin-right: 5px; float:left; width:33px; height:33px; }
+.syk-block .con .butticon .botton { width:66px; height:30px; line-height: 30px; color:#fff; border-radius: 3px; background: #308cd9; font-size: 12px; text-align: center; }
+
+.syk-rz { border:0.01em solid #dedede; text-align: center; width:80%; margin:0px auto; padding:20px 5%; }
+.syk-rz .dd1 { font-size: 18px; font-weight: bold; color:#000; }
+.syk-rz .dd2 { margin-top: 10px; font-size: 14px; color:#ff8514; line-height: 35px; }
+.syk-rz .dd2 image { width:33px; height:33px; vertical-align: middle; margin-right: 5px; }
+.syk-rz .dd3 { margin-top: 10px; font-size: 12px;  color: #b6b3af; }
+

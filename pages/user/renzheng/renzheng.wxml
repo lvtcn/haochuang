@@ -1,0 +1,73 @@
+<!--pages/user/renzheng/renzheng.wxml-->
+<view class="syk-backfixed">
+    <view class="syk-flexcenter">
+        <block wx:if='{{pcuserInfo.isok == "" || pcuserInfo.isok == 0 || pcuserInfo.isok == 3}}'>
+            <view class="syk-block">
+                <view class="img">
+                    <image src="../../../images/user/geren.jpg"></image>
+                </view>
+                <view class="con">
+                    <view class="name">个人认证</view>
+                    <view class="subname">申请领金币，享受精准服务</view>
+                    <navigator url="../rzgeren/rzgeren">
+                        <view class="butticon">
+                            <view class="botton">去认证</view>
+                            <view class="icon">
+                                <block wx:if='{{pcuserInfo.isoklx == 1}}'>
+                                    <block wx:if='{{pcuserInfo.isok == 3}}'>
+                                        <image src="../../../images/user/sb.png"></image>认证失败
+                                    </block>
+                                </block>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+            <view class="syk-block">
+                <view class="img">
+                    <image src="../../../images/user/qiye.jpg"></image>
+                </view>
+                <view class="con">
+                    <view class="name">企业认证</view>
+                    <view class="subname">申请领金币，享受精准服务</view>
+                    <navigator url="../rzqiye/rzqiye">
+                        <view class="butticon">
+                            <view class="botton">去认证</view>
+                            <view class="icon">
+                                <block wx:if='{{pcuserInfo.isoklx == 2}}'>
+                                    <block wx:if='{{pcuserInfo.isok == 3}}'>
+                                        <image src="../../../images/user/sb.png"></image>认证失败
+                                    </block>
+                                </block>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="syk-rz">
+                <view class="dd1">实名认证</view>
+                <view class="dd2">
+                    <block wx:if='{{pcuserInfo.isoklx == 1}}'>
+                        <block wx:if='{{pcuserInfo.isok == 1}}'>
+                            <image src="../../../images/user/shz.png"></image>个人认证审核中
+                        </block>
+                        <block wx:if='{{pcuserInfo.isok == 2}}'>
+                            <image src="../../../images/user/cg.png"></image>个人认证成功
+                        </block>
+                    </block>
+                    <block wx:if='{{pcuserInfo.isoklx == 2}}'>
+                        <block wx:if='{{pcuserInfo.isok == 1}}'>
+                            <image src="../../../images/user/shz.png"></image>企业认证审核中
+                        </block>
+                        <block wx:if='{{pcuserInfo.isok == 2}}'>
+                            <image src="../../../images/user/cg.png"></image>企业认证成功
+                        </block>
+                    </block>
+                </view>
+                <view class="dd3">实名认证后将获得实名认证标识，VIP服务，消息群发，政策通特权</view>
+            </view>
+        </block>
+    </view>
+</view>

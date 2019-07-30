@@ -1,0 +1,59 @@
+<!--pages/fuwu/fuwu.wxml-->
+<view class="syk--fuwu">
+    <view class="syk-top">
+        <view class="syk-namesear">
+            <view class="name">找服务</view>
+            <view class="sear">
+                <view>
+                    <i class="iconfont icon-search"></i>
+                </view>
+                <view>
+                    <input name="k" maxlength='50' class="inp" placeholder='搜索服务'/>
+                </view>
+            </view>
+        </view>
+        <!-- 头部菜单 -->
+        <!--pages/templates/header/header.wxml-->
+        <import src="../templates/header/header"/>
+        <template is="header-menu" data="{{toggleClass}}"></template>
+    </view>
+    <view class="syk-table-tr">
+        <view class="colunmlist" style="height:{{scrollHeight}}px">
+            <block wx:for="{{catalistdata}}" wx:key="*this" wx:for-index="index">
+                <view class='text {{num==index?"cur":""}}' id="{{item.classid}}" bindtap='cataClic' data-num='{{index}}'>
+                    {{item.classname}}
+                </view>
+            </block>
+        </view>
+        <view class="itemlist">
+            <view class="container">
+                <!--垂直滚动，这里必须设置高度-->
+                <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+                             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+                    <view class="list">
+                        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+                            <view class="syk-datanone">
+                                <image src="/images/wushuju.png" mode="widthFix"></image>
+                                <view>抱歉，没有相关信息 ！</view>
+                            </view>
+                        </block>
+                        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+                            <view class='li'>
+                                <view class='dd1'>
+                                    <view class='name'>{{item.title}}</view>
+                                    <view class='desc'>{{item.description}}</view>
+                                </view>
+                                <view class='dd2'>
+                                    <view class='jine'>{{item.jiage}} ￥</view>
+                                    <navigator url='../fuwu_details/fuwu_details?id={{item.id}}'>
+                                        <view class='more'>查看服务</view>
+                                    </navigator>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+    </view>
+</view>

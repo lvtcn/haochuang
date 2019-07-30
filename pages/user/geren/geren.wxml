@@ -1,0 +1,62 @@
+<!--pages/user/geren/geren.wxml-->
+<view class="syk-backfixed">
+    <form bindsubmit='formSubmit'>
+        <view class="syk-viewimg">
+            <view class="image" bindtap="uploadImages" id="touxiang">
+                <input name="touxiang" hidden="true" value="{{touxiang.valurl != null?touxiang.valurl:pcuserInfo.touxiang}}"/>
+                <block wx:if="{{pcuserInfo.touxiang != ''}}">
+                    <image src='{{touxiang.url != null?touxiang.url:pcuserInfo.wxtouxiang}}'
+                           mode="aspectFit"></image>
+                </block>
+                <block wx:else>
+                    <image src='{{touxiang.url != null?touxiang.url:"../../../images/user/touxiang.png"}}'
+                           mode="aspectFit"></image>
+                </block>
+                <view class="name">头像</view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">昵称</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='uname' type='text' placeholder='请输入您的账号昵称' value="{{pcuserInfo.uname}}" maxlength='8'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">邮箱</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='email' type='text' placeholder='请输入您的邮箱账号' value="{{pcuserInfo.email}}" maxlength='20'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">真实姓名</view>
+            <view class="tdright">
+                <view class="name">
+                    <input name='realname' type='text' placeholder='请输入您的真实姓名' value="{{pcuserInfo.realname}}" maxlength='20'></input>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor">
+            <view class="tdleft">性别</view>
+            <view class="tdright">
+                <view class="name">
+                    <radio-group class="radio-group" name="sex">
+                        <label class="radio" wx:for="{{sex}}" wx:key="*this" name="sex">
+                            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+        </view>
+        <view class="syk-viewbor bottom">
+            <view class="tdleft">手机号</view>
+            <view class="tdright">
+                <view class="name">{{pcuserInfo.mobile}}</view>
+            </view>
+        </view>
+        <button formType='submit' class='syk-submit'>保存</button>
+    </form>
+</view>

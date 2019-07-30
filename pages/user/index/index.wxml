@@ -1,0 +1,80 @@
+<view class="syk-touxiang">
+<view class="img">
+    <navigator url='{{pcuserInfo.navigateTourl}}'>
+        <view class="dd1">
+            <image src="{{pcuserInfo.touxiang != ''?pcuserInfo.wxtouxiang:'../../../images/user/touxiang.png'}}" bindtap='login' mode="aspectFit"></image>
+        </view>
+        <view class="dd2">
+            <view class="name">
+            {{pcuserInfo.mobile}}
+            </view>
+            <block wx:if='{{pcuserInfo.isok == 2 && pcuserInfo.isoklx == 1}}'>
+                <view class="icon">
+                <image src="../../../images/user/grrzicon.jpg"></image>
+                </view>
+            </block>
+            <block wx:if='{{pcuserInfo.isok == 2 && pcuserInfo.isoklx == 2}}'>
+                <view class="icon">
+                    <image src="../../../images/user/qyrzicon.jpg"></image>
+                </view>
+            </block>
+        </view>
+    </navigator>
+</view>
+</view>
+<view class="syk-dyb">
+<view class="item">
+    <navigator url="../order/order">
+        <view class="img">
+            <image src="../../../images/user/order.jpg"></image>
+        </view>
+        <view class="name">我的订单</view>
+    </navigator>
+</view>
+<view class="item">
+    <navigator url="../shoucang/shoucang">
+        <view class="img">
+            <image src="../../../images/user/yuding.jpg"></image>
+        </view>
+        <view class="name">我的收藏</view>
+    </navigator>
+</view>
+<view class="item">
+    <navigator url="../baoming/baoming">
+        <view class="img">
+            <image src="../../../images/user/baoming.jpg"></image>
+        </view>
+        <view class="name">我的报名</view>
+    </navigator>
+</view>
+</view>
+<view class="syk-user-list">
+<block wx:for="{{catainfo}}" wx:key="classname" wx:for-index="classid">
+    <view class='block {{num==classid?"cur":""}}'>
+        <view class='item' catchtap='toggleClass' data-num='{{classid}}'>
+            <view class="trleft">
+                <view class="img">
+                    <i class="iconfont {{item.classicon}}"></i>
+                </view>
+                <view class="name" data-num='{{classid}}'>
+                    {{item.classname}}
+                </view>
+            </view>
+        </view>
+        <view class="fidlist">
+            <block wx:for="{{item.fidlist}}" wx:for-item="fiditem" wx:key="classname" wx:for-index="classid">
+                <navigator url="{{fiditem.url}}">
+                <view class="text">
+                    <view>
+                        {{fiditem.classname}}
+                    </view>
+                    <view class="i">
+                        <i class="iconfont icon-arrow1"></i>
+                    </view>
+                </view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</block>
+</view>

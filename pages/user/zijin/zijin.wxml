@@ -1,0 +1,24 @@
+<view class="list">
+    <view class="tr head">
+        <view class="td">操作时间</view>
+        <view class="td">变更原因</view>
+        <view class="td">变更明细</view>
+        <view class="td">余额</view>
+    </view>
+    <view class="body">
+        <block wx:for="{{infodata}}" wx:index="index" wx:key="*this">
+            <view class="tr">
+                <view class="td">{{item.createtime}}</view>
+                <view class="td">{{item.name}}</view>
+                <view class="td jine">{{item.jine}} ￥</view>
+                <view class="td">{{item.yue}}</view>
+            </view>
+            <block wx:if='{{infodata.length == 0 && list == 0}}'>
+                <view class="syk-datanone">
+                    <image src="/images/wushuju.png" mode="widthFix"></image>
+                    <view>抱歉，您还没有相关资金信息 ！</view>
+                </view>
+            </block>
+        </block>
+    </view>
+</view>

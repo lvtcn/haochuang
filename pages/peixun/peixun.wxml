@@ -1,0 +1,50 @@
+<view class="syk-top">
+    <view class="syk-namesear">
+        <view class="name">找培训</view>
+        <view class="sear">
+            <view>
+                <i class="iconfont icon-search"></i>
+            </view>
+            <view>
+                <input bindinput="watchPassWord" name="k" maxlength='50' class="inp" placeholder='搜索培训'/>
+            </view>
+        </view>
+    </view>
+    <!-- 头部菜单 -->
+    <!--pages/templates/header/header.wxml-->
+    <import src="../templates/header/header" />
+    <template is="header-menu" data="{{toggleClass}}"></template>
+</view>
+<view class="container" >
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if='{{infodata.length == 0 && list == 0}}'>
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，没有相关信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                    <view class="title">{{item.title}}</view>
+                    <view class="rj">
+                        <view class="renshu">培训人数：{{item.renshu}} 人 <span>已报名：{{item.bmnum}} 人</span></view>
+                        <view class="jiage">￥{{item.jiage}}</view>
+                    </view>
+                    <view class="time">
+                        <view class="shijian">时间：{{item.kscreatetime}} - {{item.jscreatetime}}</view>
+                        <!--<view class="djs">{{wxTimerList['wxTimer'+index].wxTimer}}</view>-->
+                    </view>
+                    <view class="addr">
+                        <view class="dizhi">地点：{{item.addr}}</view>
+                        <navigator url="/pages/peixun_details/peixun_details?id={{item.id}}">
+                        <view class="button">我要报名</view>
+                        </navigator>
+                    </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

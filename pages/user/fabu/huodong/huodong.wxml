@@ -1,0 +1,62 @@
+<!--pages/user/fabu/fuwu/fuwu.wxml-->
+<form bindsubmit='formSubmit'>
+    <view class="syk-viewbor">
+        <view class="tdleft">活动分类</view>
+        <view class="tdright">
+            <view class="name" id="cidRange">
+                <picker value="{{cidValue}}" range="{{cidRange}}"
+                        bindchange="normalPickerBindchange">
+                    {{cidRange[cidValue]}}
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor bottom">
+        <view class="tdleft">活动名称</view>
+        <view class="tdright">
+            <view class="name">
+                <input name='title' type='text' maxlength='30'></input>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewimg">
+        <view class="image" bindtap="uploadImages" id="pic">
+            <input name="pic" hidden="true" value="{{pic.valurl}}"/>
+            <image src='{{pic.url != null?pic.url:"../../../../images/user/wutu.png"}}'
+                   mode="aspectFit"></image>
+            <view class="name">大图</view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">开始时间</view>
+        <view class="tdright">
+            <view class="name">
+                <!-- 时间部分 -->
+                <picker mode="date" value="{{dateValue}}" name="kscreatetime" start="1999/01/01/0/01/02"
+                        end="2999/12/12/12/60/60" bindchange="datePickerBindchange">
+                      {{dateValue}}
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">结束时间</view>
+        <view class="tdright">
+            <view class="name" id="cidRange">
+                <picker value="{{cidValue}}" range="{{cidRange}}"
+                        bindchange="normalPickerBindchange">
+                    {{cidRange[cidValue]}}
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="syk-viewbor">
+        <view class="tdleft">详情</view>
+        <view class="tdright namearea">
+            <view class="name">
+                <textarea name='content' type='text' maxlength='500'></textarea>
+            </view>
+        </view>
+    </view>
+    <button formType='submit' class='syk-submit'>提交</button>
+</form>

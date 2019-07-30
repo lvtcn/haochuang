@@ -1,0 +1,30 @@
+.syk-touxiang { position: relative; height:160px; display: flex; justify-content:center; align-items: center; }
+.syk-touxiang .img { text-align: center; }
+.syk-touxiang .img .dd1 { width:70px; height:70px; margin:0px auto; padding:5px; border-radius: 50%; border:0.01em solid #d7d7d7 }
+.syk-touxiang .img .dd1 image { width:70px; height:70px; border-radius: 50%;}
+.syk-touxiang .img .dd2 { display: flex; height:27px; justify-content: space-around; font-size: 18px; margin-top:10px; color:#404040; }
+.syk-touxiang .img .dd2 .name { margin-right: 0px; }
+.syk-touxiang .img .dd2 .icon image { width:36px; height:27px; }
+.syk-touxiang .shezhi { position: absolute; top:10px; right:10px; }
+.syk-touxiang .shezhi i { font-size: 1.3em; }
+
+.syk-dyb { display: flex; justify-content: center; padding:5px; background: #f6f7f9; }
+.syk-dyb .item { padding:10px; background: #fff; text-align: center; width:31%; margin:5px 1% }
+.syk-dyb .img image { width:45px; height:45px; }
+.syk-dyb .name { font-size: 16px; color:#404040; }
+
+.syk-user-list { margin-bottom: 20px; }
+.syk-user-list .block { border-bottom: 0.01em solid #f6f7f9; }
+.syk-user-list .block .fidlist { display: none; }
+.syk-user-list .block.cur .fidlist { display: block; }
+.syk-user-list .block.cur .item { border-bottom:0.01em solid #efefef; }
+.syk-user-list .item  { padding:5px 20px; height:35px; display: flex; justify-content: space-between; }
+.syk-user-list .item .trleft { display: flex; align-items: center; }
+.syk-user-list .item .trleft .img image { width:30px; height:30px; }
+.syk-user-list .item .trleft .name { font-size: 16px; margin-left:8px; }
+.syk-user-list .item .tdright { display: flex; align-items: center; }
+.syk-user-list .item .tdright .vip { font-size: 14px; color:#cdcdcd; }
+.syk-user-list .item .tdright .cz { height:25px; color:#c7c7c7; line-height:25px; font-size:14px; margin:0px 10px; padding:0px 10px; border-radius: 10px; border:0.01em solid #c7c7c7; }
+.syk-user-list .item .tdright .i i { font-size: 20px; color:#cdcdcd; }
+.syk-user-list .fidlist { color:#404040; font-size: 14px; padding-bottom: 15px; padding-left: 45px; padding-right:20px; }
+.syk-user-list .fidlist .text { display: flex; justify-content: space-between; padding-top: 15px; }

@@ -1,0 +1,69 @@
+<view class="syk-cata">
+    <view class="text {{num==0?'cur':''}}" bindtap="cataClic" data-status="0" data-num='0'>
+        全部订单
+    </view>
+    <view class="text {{num==1?'cur':''}}" bindtap="cataClic" data-status="1" data-num='1'>
+        代付款
+    </view>
+    <view class="text {{num==2?'cur':''}}" bindtap="cataClic" data-status="2" data-num='2'>
+        已完成
+    </view>
+</view>
+<view class="container" >
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;"
+             class="syk-scrolist" bindscrolltolower="bindDownLoad">
+    <view class="list">
+        <block wx:if="{{infodata.length == 0 && list == 0}}">
+            <view class="syk-datanone">
+                <image src="/images/wushuju.png" mode="widthFix"></image>
+                <view>抱歉，您没有相关订单信息 ！</view>
+            </view>
+        </block>
+        <block wx:for="{{list}}" wx:key="*this" wx:index="index">
+            <view class="li">
+                <view class="status">
+                    <block wx:if="{{item.status == 1}}">
+                        等待付款
+                    </block>
+                    <block wx:if="{{item.status == 2}}">
+                        已完成
+                    </block>
+                    <block wx:if="{{item.status == 3}}">
+                        已取消
+                    </block>
+                </view>
+                <view class="top">
+                    <navigator url="../../order/order?t={{item.shopname}}&id={{item.shopid}}">
+                        <view class="tdleft">
+                            <image src="{{item.pic}}" mode="aspectFill"></image>
+                        </view>
+                    </navigator>
+                    <view class="tdright">
+                        <view class="name">{{item.title}}</view>
+                    </view>
+                </view>
+                <view class="orji">
+                    <view class="order">订单编号：{{item.ordernumber}}</view>
+                    <view class="jiage">
+                        需付款：<span>￥{{item.lamount}}</span>
+                    </view>
+                </view>
+                <view class="buttom">
+                    <block wx:if="{{item.status == '1'}}">
+                        <navigator url="../../cashier/cashier?t={{item.shopname}}&id={{item.shopid}}"
+                                   class="button">
+                            去付款
+                        </navigator>
+                    </block>
+                    <block wx:if="{{item.status != '1'}}">
+                        <view class="qx" bindtap="del" id="{{item.id}}">
+                            删除订单
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+</view>

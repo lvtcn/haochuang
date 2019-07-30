@@ -1,0 +1,15 @@
+/* pages/user/banklist/banklist.wxss */
+.block {
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    width:70%; padding:10px 5%; margin:10px auto; border-radius: 15px; height:100px; }
+.block .item { width:100%; color:#fff; height:100px; line-height: 100px; text-align: center; }
+.block .item i { font-size: 50px; font-weight: bold; }
+.block .bitem { position: relative; width:100%; color:#fff; font-size: 12px; }
+.block .bitem .hid { font-size: 16px; margin-top: 0px; }
+.block .bitem .name { margin-top: 35px; }
+.block .bitem .number { font-size: 14px; margin-top: 10px; }
+.block .bitem .jb { position: absolute; right:0px; top:10px; width:45px; height:30px; line-height: 30px; text-align: center; background-color: rgba(255,255,255,0.2); border-radius: 20px; }
+.syk-viewbor:nth-child(2) .block { background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); }
+.syk-viewbor:nth-child(3) .block { background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%); }
+.syk-viewbor:nth-child(4) .block { background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); }
+.syk-viewbor:nth-child(5) .block { background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); }

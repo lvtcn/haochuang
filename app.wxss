@@ -1,0 +1,105 @@
+/**app.wxss**/
+@import "static/iconfont/iconfont.wxss";
+@import "pages/templates/header/header.wxss";
+.navigator-hover { background: none; }
+
+/* pages/register/register.wxss */
+.syk-register { margin:40px auto; }
+.syk-register .title { text-align: center; margin-top: 40px; margin-bottom: 40px; font-size: 1.4em; font-weight: bold; color:#fd8814 }
+.syk-block { margin:0px 2%; margin-top: 20px; }
+.syk-inp { display: flex; }
+.syk-inp .inptext { flex: 1; border:0.01em solid #dedede; line-height: 40px; width:96%; height:40px; padding:0px 2%; border-radius: 5px;}
+.syk-inp .inptext input { width:100%; height:40px; line-height: 40px; color:#757575; font-size: 14px; }
+.syk-inp .button { text-align: center; font-size: 14px; margin-left: 5px; border-radius: 5px; width:130px; height:40px; line-height: 40px; color:#fff; background: #299df4; }
+.syk-inp .button.button-hover { background: #c1c1c1; }
+.syk-inp .button.disabled { background: #c1c1c1; }
+
+.syk-em { margin-top: 5px; display: flex; align-items: center; height:30px; line-height: 30px; }
+.syk-em .icon { margin-right: 3px; width:25px; height:25px; }
+.syk-em .icon image { width:25px; height:23px; }
+.syk-em .icon checkbox { position: relative; top:-5px; }
+.syk-em .name { flex: 1; font-size: 14px; color:#939393; }
+.syk-em .name span { color:#299df4; }
+
+.syk-submit { width:96%; margin:20px auto 30px auto; height:45px; border-radius: 5px; line-height: 45px; text-align: center; font-size: 16px; color:#fff; background: #ff8518; }
+.syk-submit.button-hover { background: #fbbf89; }
+
+/* pages/user/geren/geren.wxss */
+.syk-backfixed { position: fixed; top:0px; height:100%; bottom:0px; width:100%; background-repeat:round; background-color:#f8f8f8;  }
+.syk-table { margin-bottom: 20px; }
+.syk-viewbor { background: #fff; padding:0px 2%; display:flex; justify-content: space-between; }
+.syk-viewbor .tdleft { line-height: 50px; text-align: left; font-size: 12px; color:#999999; width:70px; }
+.syk-viewbor .tdright { font-size: 14px; display: flex; flex: 1;}
+.syk-viewbor .tdright .name { line-height: 50px; font-size: 16px; border-bottom: .01em solid #ededed; margin-left: 5px; width: 100%; color:#000000; }
+.syk-viewbor .tdright .name.x { padding:15px 0px; line-height: normal; font-size: 12px; }
+.syk-viewbor .tdright .name.hong { color:#ff6669 }
+.syk-viewbor .tdright .name:nth-child(1) { margin-left: 0px; }
+.syk-viewbor .tdright .name image { width:50px; height:50px; }
+.syk-viewbor .tdright .name input { width:100%; height:50px; line-height: 50px; }
+.syk-viewbor .tdright .name .pickerc { font-size: 14px; }
+.syk-viewbor .tdright.namearea { line-height: 0px; }
+.syk-viewbor .tdright.namearea textarea { font-size: 16px; padding: 10px 0px; width:100%; height:100px; line-height: 30px; }
+.syk-viewbor .tdright .icon { color:#8d8d8d; font-size: 18px; }
+.syk-viewbor.bottom { border-top:5px solid #f8f8f8; }
+
+.syk-viewimg { text-align: center; background: #fff; padding:20px 2%; display:flex; justify-content: space-around; }
+.syk-viewimg .image {  }
+.syk-viewimg .image image { max-width:120px; max-height:80px; }
+.syk-viewimg .name { margin-top: 10px; font-size: 12px; color:#999999;  }
+
+/*select*/
+.syk-select { font-size: 12px; display: flex; justify-content: space-between; }
+.syk-optionback { display: none; background: rgba(0,0,0,0.2); position: fixed; bottom:0px; height:100%; left:0px; width:100%; z-index: 999 }
+.syk-optionitem { display: none; box-shadow: 0px 0px 30px 10px rgba(255,255,255,0.2); font-size: 14px; color:#000; background: #fff; position: fixed; bottom:0px; height:auto; left:0px; width:100%; z-index: 9999}
+.syk-optionitem.show { display: block; }
+.syk-optionback.show { display: block; }
+.syk-optionitem .xianshi { border-bottom: 0.01em solid #efefef; padding:0px 4%; font-size: 12px; }
+.syk-optionitem .block { padding:10px 0px; display: flex; justify-content: space-around; }
+.syk-optionitem .block .item { text-align: center; margin:0px 1%; width:23%; height:180px; overflow-y: auto; }
+.syk-optionitem .block .item .option { padding:0px 10px; overflow: hidden; font-size: 12px; text-align: center; height:40px; line-height: 40px; }
+.syk-optionitem .block .item .option.cur { background-color: #dedede; }
+.syk-optionitem .butt { margin-bottom: 5px; display: flex; justify-content: space-between; }
+.syk-optionitem .butt button { font-size: 14px; width:48%; height:40px; line-height:40px; }
+.syk-optionitem .butt button.qd { color:#fff; background-color: #03a9f3; box-shadow: 0px 0px 0px 0px;}
+.syk-optionitem .butt button.qx { background-color: #f1f1f1;box-shadow: 0px 0px 0px 0px ; }
+
+/*详情页*/
+.syk-content { margin-bottom: 50px; padding:15px; line-height: 30px; font-size: 14px; }
+.syk-content image { max-width: 100%; }
+.stk-content-pos { font-weight: bold; color:#101010; font-size: 16px; margin-bottom: 20px; }
+.syk-datanone { width:100%; font-size: 16px; color:#666; padding:60px 0px; text-align: center; background: #fff; }
+.syk-datanone image { width:100px; margin-bottom: 20px; }
+
+/*列表页栏目显示*/
+.syk-cata { box-shadow: 0px 1px 1px rgba(0,0,0,0.1); z-index: 1; background: #fff; flex-wrap: wrap; overflow: hidden; display: flex; position: fixed; top:61px; left:0px; width:100%; height:40px; }
+.syk-cata.show {
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    height:auto;
+    opacity: 1;
+    transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transform:scaleY(1);
+    -moz-transform:scaleY(1);
+    -ms-transform:scaleY(1);
+    -webkit-transform:scaleY(1);
+    transform-origin: 1% 1%;
+}
+.syk-cata .text { font-size: 12px; width:23%; text-align: center; height:39px; line-height: 39px; color:#7f7f7f; }
+.syk-cata .text.cur { font-weight: bold; font-size: 14px; border-bottom: 2px solid #e54c60; color:#e54c60; }
+.syk-cata .jiatou { position: absolute; top:0px; right:9px; line-height: 40px; }
+.syk-cata .jiatou i { font-size: 16px; color:#7f7f7f; }
+
+/*购买详情底部*/
+.syk-deta-footer { display: flex; justify-content: space-between; position: fixed; width:100%; height:50px; bottom:0px; left:0px; background: #fff; box-shadow: 0px 0px 2px rgba(0,0,0,0.3) }
+.syk-deta-footer .tdleft { display: flex; width:160px; }
+.syk-deta-footer .tdleft .icon { text-align: center; color:#757575; width:100%; }
+.syk-deta-footer .tdleft .icon .i { margin-top: 3px; }
+.syk-deta-footer .tdleft .icon .i i { font-size: 20px;}
+.syk-deta-footer .tdleft .icon .name { font-size:12px; margin-top: 2px; }
+.syk-deta-footer .tdleft .icon.cur .i i { color:#ff7300 }
+.syk-deta-footer .tdleft .icon.cur .name { color:#ff7300 }
+.syk-deta-footer .tdright { flex: 1; }
+.syk-deta-footer .tdright .button { border:0.01em solid rgba(0,0,0,0.05); border-radius: 0px; text-align: center; line-height: 50px; color:#fff; font-size: 16px; background: #0196e6; }

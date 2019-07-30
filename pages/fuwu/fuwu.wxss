@@ -1,0 +1,13 @@
+/* pages/fuwu/fuwu.wxss */
+.syk-table-tr { position: relative; }
+.colunmlist { position: fixed; top:61px; background: #eeedf3; width:27%; overflow-y: auto; }
+.colunmlist .text { padding:15px 10px; font-size: 12px; color:#69696b; background: #eeedf3; }
+.colunmlist .text.cur { background: #fff; font-weight: bold; color:#ec4a48; border-left:2px solid #ec4a48; }
+.itemlist { position: absolute; right:0px; top:61px; width:73%; overflow-y: auto; }
+.itemlist .li { min-height: 60px; display: flex; justify-content: space-between; padding:20px 15px; border-bottom: 0.01em solid #ebebeb; }
+.itemlist .li .dd1 { flex: 1; }
+.itemlist .li .dd1 .name { font-size: 16px; color:#303030; }
+.itemlist .li .dd1 .desc { font-size: 14px; margin-top:10px; color:#939393; line-height: 25px; }
+.itemlist .li .dd2 { width:90px; position: relative; }
+.itemlist .li .dd2 .jine { text-align: right; color:#ff6766; font-size: 14px; }
+.itemlist .li .dd2 .more { position: absolute; right:0px; bottom:0px; background:#ff6766; color:#fff; height:30px; border-radius: 20px; width:80px; text-align: center; line-height: 30px; font-size: 14px; }
